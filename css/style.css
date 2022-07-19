@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@0;1&display=swap');
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(20, 5, 14, 0.6),rgba(156, 124, 144, 0.6)),url(../images/back.png);
+    background-position: center;
+    background-size: cover;
+    animation: backImg 20s ease-in infinite;
+}
+@keyframes backImg {
+    0%{
+        background: linear-gradient(rgba(20, 5, 14, 0.6),rgba(156, 124, 144, 0.6)),url(../images/back.png);
+        background-position: center;
+        background-size: cover;
+    }
+    50%{
+        background: linear-gradient(rgba(20, 5, 14, 0.6),rgba(156, 124, 144, 0.6)),url(../images/w-2.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    95%{
+        background: linear-gradient(rgba(20, 5, 14, 0.6),rgba(156, 124, 144, 0.6)),url(../images/w-3.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+}
+.header .nav nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 6rem;
+    transition: all .3s ease-in;
+}
+.header .nav nav:hover{
+    background: rgb(201, 170, 170);
+}
+.header .nav nav .logo{
+    color: aliceblue;
+    text-transform: uppercase;
+    font-family: Gentium Book Plus;
+    font-weight: 700;
+}
+.header .nav nav .logo img{
+    width: 4rem;
+}
+.header .nav nav ul li{
+    display: inline-block;
+    margin-right: 2rem;
+    position: relative;
+}
+.header .nav nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    text-transform: capitalize;
+    font-family: Gentium Book Plus;
+}
+.active::after{
+    content: '';
+    width: 3rem;
+    height: .2rem;
+    position: absolute;
+    top: .5rem;
+    left: 0;
+    margin-top: 1rem;
+    background: rgb(156, 109, 123);
+}
+
+.home-content{
+    width: 45%;
+    margin-top: 7rem;
+    margin-left: 6rem;
+}
+.home-content h1{
+    color: aliceblue;
+    font-family: Gentium Book Plus;
+    font-weight: 700;
+    font-size: 4rem;
+}
+.home-content p{
+    font-family: Gentium Book Plus;
+    color: rgb(204, 210, 216);
+    letter-spacing: 1px;
+}
+.home-content .btns{
+    margin-top: 2rem;
+}
+.home-content .btns .h-btn{
+    color: aliceblue;
+    text-decoration: none;
+    border: 2px solid;
+    padding: .5rem 1.5rem;
+    border-radius: 1rem;
+    transition: background .3s ease-in-out;
+    margin-right: .5rem;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    -ms-transition: background .3s ease-in-out;
+    -o-transition: background .3s ease-in-out;
+}
+.home-content .btns .h-btn:hover{
+    background: rgb(201, 170, 170);
+}
+
+.slide-left{
+    animation: slideLeft 1s linear forwards;
+}
+@keyframes slideLeft {
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+        -webkit-transform: translate(100px);
+        -moz-transform: translate(100px);
+        -ms-transform: translate(100px);
+        -o-transform: translate(100px);
+}
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+        -webkit-transform: translate(0px);
+        -moz-transform: translate(0px);
+        -ms-transform: translate(0px);
+        -o-transform: translate(0px);
+}
+}
+p.slide-left{
+    animation-delay: 1s;
+    opacity: 0;
+}
+.btns.slide-left{
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+/* responsive design */
